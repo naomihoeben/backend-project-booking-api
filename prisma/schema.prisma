@@ -1,0 +1,108 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider     = "sqlite"
+  url          = "file:./dev.db"
+  relationMode = "prisma"
+}
+
+model User {
+  id             String    @id @default(uuid())
+  username       String    @unique
+  password       String
+  name           String
+  email          String
+  phoneNumber    String
+  profilePicture String
+  bookings       Booking[]
+  reviews        Review[]
+}
+
+model Host {
+  id             String     @id @default(uuid())
+  username       String     @unique
+  password       String
+  name           String
+  email          String
+  phoneNumber    String
+  profilePicture String
+  aboutMe        String
+  listings       Property[]
+}
+
+model Property {
+  id            String            @id @default(uuid())
+  hostId        String
+  title         String
+  description   String
+  location      String
+  pricePerNight Float
+  bedroomCount  Int
+  bathRoomCount Int
+  maxGuestCount Int
+  rating        Int
+  host          Host              @relation(fields: [hostId], references: [id])
+  amenities     PropertyAmenity[]
+  bookings      Booking[]
+  reviews       Review[]
+
+  @@index([hostId])
+}
+
+model Amenity {
+  id         String            @id @default(uuid())
+  name       String
+  properties PropertyAmenity[]
+}
+
+model Booking {
+  id             String   @id @default(uuid())
+  userId         String
+  propertyId     String
+  checkinDate    DateTime
+  checkoutDate   DateTime
+  numberOfGuests Int
+  totalPrice     Int
+  bookingStatus  String
+  user           User     @relation(fields: [userId], references: [id])
+  property       Property @relation(fields: [propertyId], references: [id])
+
+  @@index([userId])
+  @@index([propertyId])
+}
+
+model Review {
+  id         String   @id @default(uuid())
+  userId     String
+  propertyId String
+  rating     Int
+  comment    String
+  user       User     @relation(fields: [userId], references: [id])
+  property   Property @relation(fields: [propertyId], references: [id])
+
+  @@index([userId])
+  @@index([propertyId])
+}
+
+model PropertyAmenity {
+  id         String   @id @default(uuid())
+  property   Property @relation(fields: [propertyId], references: [id])
+  propertyId String
+  amenity    Amenity  @relation(fields: [amenityId], references: [id])
+  amenityId  String
+
+  @@unique([propertyId, amenityId])
+  @@index([propertyId])
+  @@index([amenityId])
+}
+
+model AmenityToProperty {
+  A String
+  B String
+
+  @@unique([A, B], map: "_AmenityToProperty_AB_unique")
+  @@index([B], map: "_AmenityToProperty_B_index")
+  @@map("_AmenityToProperty")
+}

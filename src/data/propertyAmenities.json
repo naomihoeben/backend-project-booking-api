@@ -1,0 +1,116 @@
+{
+	"propertyAmenities": [
+		{
+			"propertyId": "g9012345-67ef-0123-4567-89abcdef0123",
+			"amenityId": "o7890123-45lm-nopq-4567-89abcdef0123"
+		},
+		{
+			"propertyId": "g9012345-67ef-0123-4567-89abcdef0123",
+			"amenityId": "q9012345-67no-pqrs-6789-abcdef012345"
+		},
+		{
+			"propertyId": "g9012345-67ef-0123-4567-89abcdef0123",
+			"amenityId": "r0123456-78op-qrst-789a-bcdef0123456"
+		},
+		{
+			"propertyId": "g9012345-67ef-0123-4567-89abcdef0123",
+			"amenityId": "s1234567-89pq-rstu-89ab-cdef01234567"
+		},
+		{
+			"propertyId": "g9012345-67ef-0123-4567-89abcdef0123",
+			"amenityId": "u3456789-01rs-tuvw-01cd-ef0123456789"
+		},
+		{
+			"propertyId": "h0123456-78f0-1234-5678-9abcdef01234",
+			"amenityId": "l4567890-12gh-ijkl-1234-56789abcdef0"
+		},
+		{
+			"propertyId": "h0123456-78f0-1234-5678-9abcdef01234",
+			"amenityId": "p8901234-56mn-opqr-5678-9abcdef01234"
+		},
+		{
+			"propertyId": "h0123456-78f0-1234-5678-9abcdef01234",
+			"amenityId": "q9012345-67no-pqrs-6789-abcdef012345"
+		},
+		{
+			"propertyId": "h0123456-78f0-1234-5678-9abcdef01234",
+			"amenityId": "t2345678-90qr-stuv-90bc-def012345678"
+		},
+		{
+			"propertyId": "i1234567-89f0-1234-5678-9abcdef01234",
+			"amenityId": "l4567890-12gh-ijkl-1234-56789abcdef0"
+		},
+		{
+			"propertyId": "i1234567-89f0-1234-5678-9abcdef01234",
+			"amenityId": "m5678901-23ij-klmn-2345-6789abcdef01"
+		},
+		{
+			"propertyId": "i1234567-89f0-1234-5678-9abcdef01234",
+			"amenityId": "o7890123-45lm-nopq-4567-89abcdef0123"
+		},
+		{
+			"propertyId": "i1234567-89f0-1234-5678-9abcdef01234",
+			"amenityId": "p8901234-56mn-opqr-5678-9abcdef01234"
+		},
+		{
+			"propertyId": "i1234567-89f0-1234-5678-9abcdef01234",
+			"amenityId": "q9012345-67no-pqrs-6789-abcdef012345"
+		},
+		{
+			"propertyId": "i1234567-89f0-1234-5678-9abcdef01234",
+			"amenityId": "r0123456-78op-qrst-789a-bcdef0123456"
+		},
+		{
+			"propertyId": "j2345678-90f1-2345-6789-abcdef012345",
+			"amenityId": "l4567890-12gh-ijkl-1234-56789abcdef0"
+		},
+		{
+			"propertyId": "j2345678-90f1-2345-6789-abcdef012345",
+			"amenityId": "m5678901-23ij-klmn-2345-6789abcdef01"
+		},
+		{
+			"propertyId": "j2345678-90f1-2345-6789-abcdef012345",
+			"amenityId": "n6789012-34kl-mnop-3456-789abcdef012"
+		},
+		{
+			"propertyId": "j2345678-90f1-2345-6789-abcdef012345",
+			"amenityId": "o7890123-45lm-nopq-4567-89abcdef0123"
+		},
+		{
+			"propertyId": "j2345678-90f1-2345-6789-abcdef012345",
+			"amenityId": "p8901234-56mn-opqr-5678-9abcdef01234"
+		},
+		{
+			"propertyId": "j2345678-90f1-2345-6789-abcdef012345",
+			"amenityId": "q9012345-67no-pqrs-6789-abcdef012345"
+		},
+		{
+			"propertyId": "j2345678-90f1-2345-6789-abcdef012345",
+			"amenityId": "r0123456-78op-qrst-789a-bcdef0123456"
+		},
+		{
+			"propertyId": "j2345678-90f1-2345-6789-abcdef012345",
+			"amenityId": "s1234567-89pq-rstu-89ab-cdef01234567"
+		},
+		{
+			"propertyId": "j2345678-90f1-2345-6789-abcdef012345",
+			"amenityId": "t2345678-90qr-stuv-90bc-def012345678"
+		},
+		{
+			"propertyId": "j2345678-90f1-2345-6789-abcdef012345",
+			"amenityId": "u3456789-01rs-tuvw-01cd-ef0123456789"
+		},
+		{
+			"propertyId": "k3456789-01f2-3456-789a-bcdef0123456",
+			"amenityId": "o7890123-45lm-nopq-4567-89abcdef0123"
+		},
+		{
+			"propertyId": "k3456789-01f2-3456-789a-bcdef0123456",
+			"amenityId": "q9012345-67no-pqrs-6789-abcdef012345"
+		},
+		{
+			"propertyId": "k3456789-01f2-3456-789a-bcdef0123456",
+			"amenityId": "u3456789-01rs-tuvw-01cd-ef0123456789"
+		}
+	]
+}
