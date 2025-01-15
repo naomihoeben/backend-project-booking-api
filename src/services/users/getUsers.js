@@ -8,8 +8,8 @@ const getUsers = async (filters) => {
 
 		const users = await prisma.user.findMany({
 			where: {
-				...(username && { username: { contains: username, mode: "insensitive" } }),
-				...(email && { email: { contains: email, mode: "insensitive" } }),
+				...(username && { username: { contains: username } }),
+				...(email && { email: { contains: email } }),
 			},
 			select: {
 				id: true,

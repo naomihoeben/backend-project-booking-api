@@ -97,12 +97,3 @@ model PropertyAmenity {
   @@index([propertyId])
   @@index([amenityId])
 }
-
-model AmenityToProperty {
-  A String
-  B String
-
-  @@unique([A, B], map: "_AmenityToProperty_AB_unique")
-  @@index([B], map: "_AmenityToProperty_B_index")
-  @@map("_AmenityToProperty")
-}

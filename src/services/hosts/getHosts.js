@@ -8,7 +8,7 @@ const getHosts = async (filters) => {
 
 		const hosts = await prisma.host.findMany({
 			where: {
-				...(name && { name: { contains: name, mode: "insensitive" } }),
+				...(name && { name: { contains: name } }),
 			},
 			select: {
 				id: true,

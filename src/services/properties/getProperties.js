@@ -1,4 +1,4 @@
-import { PrismaClient } from "@prisma/client";
+import { PrismaClient, Prisma } from "@prisma/client";
 
 const prisma = new PrismaClient();
 
@@ -10,23 +10,28 @@ const getProperties = async (filters) => {
 		if (location) {
 			whereClause.location = {
 				contains: location,
-				mode: "insensitive",
 			};
 		}
 
 		if (pricePerNight) {
-			whereClause.pricePerNight = Number(pricePerNight);
+			if (isNaN(pricePerNight)) {
+				throw new Error("Invalid value for pricePerNight. Must be a number.");
+			}
+			whereClause.pricePerNight = Number(pricePerNight); // Convert to number
 		}
 
 		if (amenities) {
+			const amenitiesList = amenities.split(",").map((a) => a.trim());
 			whereClause.amenities = {
 				some: {
 					amenity: {
-						name: { equals: amenities },
+						name: { in: amenitiesList },
 					},
 				},
 			};
 		}
+
+		console.log("Filters applied:", whereClause);
 
 		const properties = await prisma.property.findMany({
 			where: whereClause,
@@ -46,6 +51,10 @@ const getProperties = async (filters) => {
 
 		return properties;
 	} catch (error) {
+		if (error instanceof Prisma.PrismaClientKnownRequestError) {
+			console.error(`[Service] Prisma error: ${error.message}`);
+			return { status: 400, message: `Database query error: ${error.message}` };
+		}
 		console.error(`[Service] getProperties - Error: ${error.message}`);
 		return { status: 500, message: `Failed to fetch properties. ${error.message}` };
 	} finally {
